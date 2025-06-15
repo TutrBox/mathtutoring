@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TutrBox Math | Home</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="TutrBox Math: Inspiring confidence and excellence in math for early grade students. Discover our programs, approach, and how we help your child succeed!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+/* Smooth dropdown animation */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    display: block;
+    pointer-events: none;
+}
+.nav-item.show .dropdown-menu,
+.dropdown-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+/* Make dropdown push nav items down only when open */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown.show {
+    position: static;
+  }
+  .navbar-nav .dropdown.show .dropdown-menu {
+    position: static;
+    float: none;
+    box-shadow: none;
+    margin-top: 0.5rem;
+  }
+}
+/* Navbar link hover underline and color animation */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.2s;
+}
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #1976d2;
+    transition: width 0.2s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #174ea6;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+    width: 100%;
+}
+        body {
+            font-family: 'Quicksand', Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(270deg, #e3f2fd, #bbdefb, #1976d2, #64b5f6, #e0f7fa, #e3f2fd);
+            background-size: 1200% 1200%;
+            animation: gradientBG 12s ease infinite;
+            color: #222;
+        }
+        @keyframes gradientBG {
+            0% {background-position:0% 50%}
+            50% {background-position:100% 50%}
+            100% {background-position:0% 50%}
+        }
+        h1, h2, h3 {
+            font-family: 'Quicksand', Arial, sans-serif;
+        }
+        h1 {
+            color: #174ea6;
+            font-weight: 700;
+            text-shadow: 0 2px 12px #bbdefb;
+        }
+        h2 {
+            color: #1976d2;
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+        .hero-section {
+            background: linear-gradient(90deg, #e3f2fd 60%, #bbdefb 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem 2rem 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 18px rgba(33, 150, 243, 0.15);
+            text-align: center;
+            animation: bounceIn 1.2s;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(33, 150, 243, 0.10);
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(33, 150, 243, 0.18);
+        }
+        .btn-glow {
+            background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+            color: #fff;
+            border: none;
+            box-shadow: 0 0 16px 2px #64b5f6, 0 2px 8px rgba(33,150,243,0.13);
+            font-weight: bold;
+            font-size: 1.15em;
+            padding: 0.75em 2em;
+            border-radius: 2em;
+            transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+            margin-top: 1.5em;
+            animation: pulse 1.2s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 16px 2px #64b5f6, 0 2px 8px rgba(33,150,243,0.13);}
+            100% { box-shadow: 0 0 32px 8px #1976d2, 0 4px 16px rgba(33,150,243,0.18);}
+        }
+        .btn-glow:hover, .btn-glow:focus {
+            background: linear-gradient(90deg, #174ea6 60%, #42a5f5 100%);
+            box-shadow: 0 0 32px 4px #1976d2, 0 4px 16px rgba(33,150,243,0.18);
+            transform: scale(1.05);
+            color: #fff;
+        }
+        .section-title {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #174ea6;
+            text-align: center;
+        }
+        .footer {
+            background: #e3f2fd;
+            color: #174ea6;
+            text-align: center;
+            padding: 1.2rem 0 0.7rem 0;
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 3rem;
+            font-size: 1.1em;
+        }
+        .cta-btns .btn-glow {
+            margin: 0.5em 1em 0.5em 1em;
+        }
+        /* Icon circle style */
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: #bbdefb;
+            color: #1976d2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem auto;
+        }
+        /* How it works steps */
+        .how-step {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(33, 150, 243, 0.10);
+            padding: 1.5rem 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .faq-section {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap Navbar (unchanged) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2" style="border-radius: 0 0 1rem 1rem;">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#" style="font-family: 'Quicksand', Arial, sans-serif;">
+                TutrBox Math
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold text-primary" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="programsDropdown">
+                            <li><a class="dropdown-item" href="#">Grades 1–2</a></li>
+                            <li><a class="dropdown-item" href="#">Grades 3–4</a></li>
+                            <li><a class="dropdown-item" href="#">Math Enrichment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-primary" href="#">Approach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-primary" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-primary" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="hero-section shadow-lg">
+            <h1>Welcome to TutrBox Math</h1>
+            <p class="lead mt-3 mb-4" style="font-size:1.35em;">
+                Inspiring confidence and excellence in math for students in grades 1–4.<br>
+                Discover our unique approach, engaging programs, and supportive community!
+            </p>
+            <div class="cta-btns d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <a href="mailto:ayush.sh045@gmail.com?subject=Book%20a%20Trial%20Class%20-%20TutrBox%20Math" class="btn btn-glow btn-lg mb-2 mb-md-0">Book a Trial Class</a>
+                <a href="register.html" class="btn btn-glow btn-lg">Register Now</a>
+            </div>
+        </div>
+
+        <!-- Why Tutrbox Math Section -->
+        <h2 class="section-title">Why TutrBox Math?</h2>
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="icon-circle mb-2"><span>&#128161;</span></div>
+                <h5 class="fw-bold text-primary">Engaging Curriculum</h5>
+                <p>Our lessons are interactive and fun, designed to spark curiosity and build a love for math.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="icon-circle mb-2"><span>&#128104;&#8205;&#127979;</span></div>
+                <h5 class="fw-bold text-primary">Expert Tutors</h5>
+                <p>Our tutors are passionate, experienced, and dedicated to helping every child succeed.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="icon-circle mb-2"><span>&#128640;</span></div>
+                <h5 class="fw-bold text-primary">Proven Results</h5>
+                <p>Students gain confidence, improve grades, and develop strong problem-solving skills.</p>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <h2 class="section-title">How It Works</h2>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-3 how-step mx-2">
+                <h5 class="fw-bold text-primary mb-2">1. Book a Trial</h5>
+                <p>Contact us to schedule a free trial class and see our teaching in action.</p>
+            </div>
+            <div class="col-md-3 how-step mx-2">
+                <h5 class="fw-bold text-primary mb-2">2. Personalized Plan</h5>
+                <p>We assess your child's needs and create a custom learning plan just for them.</p>
+            </div>
+            <div class="col-md-3 how-step mx-2">
+                <h5 class="fw-bold text-primary mb-2">3. Start Learning</h5>
+                <p>Your child joins our engaging sessions and begins their math success journey!</p>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="feature-card text-center">
+                    <h3 class="mb-3 text-primary">Personalized Learning</h3>
+                    <p>
+                        Every child is unique. We tailor our lessons to each student's needs, helping them build a strong foundation and love for math.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center">
+                    <h3 class="mb-3 text-primary">Expert Tutors</h3>
+                    <p>
+                        Our passionate tutors are dedicated to making math fun, engaging, and accessible for all early grade students.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center">
+                    <h3 class="mb-3 text-primary">Flexible & Supportive</h3>
+                    <p>
+                        We offer flexible scheduling, regular progress updates, and a safe, encouraging environment for every learner.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 class="section-title">Parent FAQ</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            What grades do you serve?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We specialize in tutoring for students in grades 1–4.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Do you offer online and in-person classes?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We offer both online and in-person sessions to fit your family's needs.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How do I get started?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Simply book a trial class or register online. We'll guide you through every step!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="text-center mt-5">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="lead">Have more questions? Ready to enroll? We're here to help!</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:tutrbox6@gmail.com">tutrbox6@gmail.com</a><br>
+            </p>
+            <a href="mailto:tutrbox6@gmail.com?subject=Book%20a%20Trial%20Class%20-%20TutrBox%20Math" class="btn btn-glow btn-lg mb-2 mb-md-0">Book a Trial Class</a>
+            <a href="mailto:tutrbox6@gmail.com?subject=Registe%20my%20Child%20Now%20-%20TutrBox%20Math" class="btn btn-glow btn-lg mb-2 mb-md-0">Register Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer mt-5">
+        &copy; 2025 TutrBox Math. All rights reserved.
+    </div>
+
+    <!-- Bootstrap JS (for navbar, accordion, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
